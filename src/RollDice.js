@@ -25,21 +25,20 @@ class RollDice extends Component{
       val1: this.props.dieVal[die1],
       val2: this.props.dieVal[die2],
       rolling: true,
-      shaking: 'shaking',
       cursor: 'progress',
       sum: sum
     })
     //wait one second then set rolling to false
     setTimeout(() => {
-      this.setState ({rolling: false, shaking: '', cursor: ''})
+      this.setState ({rolling: false, cursor: ''})
     },1000)
   }
   render(){
     return(
       <div className='roll-dice'>
         <div className='dice'>
-        <Die val={this.state.val1} shaking={this.state.shaking}/>
-        <Die val={this.state.val2} shaking={this.state.shaking}/>
+        <Die val={this.state.val1} rolling={this.state.rolling}/>
+        <Die val={this.state.val2} rolling={this.state.rolling}/>
         </div>
 
         <button id={this.state.cursor} onClick={this.handleClick} disabled={this.state.rolling}>

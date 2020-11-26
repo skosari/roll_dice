@@ -11,7 +11,7 @@ class Die extends Component{
   render(){
     
     return(
-      <div className={`Die ${this.props.shaking}`}>
+      <div className={`Die ${this.props.rolling && 'shaking'}`}>
         <i className={`fas fa-dice-${this.props.val}`}></i>
       </div>
     )

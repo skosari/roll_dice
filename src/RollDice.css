@@ -1,0 +1,28 @@
+.roll-dice{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.roll-dice button{
+  width: 150;
+  border-radius: 1em;
+  border-color: green;
+  color: green;
+  background-color: yellow;
+  padding: 10;
+  align-self: center;
+}
+#progress{
+  cursor: progress;
+}
+.roll-dice button:hover{
+  cursor: pointer;
+  background-color: orange;
+  color: white;
+}
+.dice{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+}
